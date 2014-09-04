@@ -1,6 +1,7 @@
 /*
     Scott Nevin
     09/04/14
+    print2Darray
     Purpose: Print 2D array using classes and labels
 */
 
