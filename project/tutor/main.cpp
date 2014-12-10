@@ -26,7 +26,6 @@ int main(int argc, char **argv){
 
     //int num = 10;
 
-
     //Declare variables
     QApplication app(argc, argv);
     QWidget *window = new QWidget;
@@ -43,14 +42,19 @@ int main(int argc, char **argv){
     QPushButton *division = new QPushButton("Division");
     QPushButton *closeButton = new QPushButton("Quit");
 
-    //add sliders/spinboxes
-
-
+    //add spinboxes
+    QSpinBox *spinbox = new QSpinBox;
+    spinbox->setRange(1,5);
 
     //connect buttons
     QObject::connect(closeButton, SIGNAL(clicked()), &app, SLOT(quit()));
 
-    //connect sliders/spinboxes
+    //connect spinboxes
+    QObject::connect(spinbox, SIGNAL(valueChanged(int)), &app, SLOT(value()));
+    int num = spinbox->value();
+    //print number as label
+    QString tmp = QString::number(num);
+    QLabel *label = new QLabel(tmp);
 
     //print number as label
     //QString tmp = QString::number(num);
@@ -64,6 +68,8 @@ int main(int argc, char **argv){
     layout->addWidget(subtraction);
     layout->addWidget(multiplication);
     layout->addWidget(division);
+    layout->addWidget(spinbox);
+    layout->addWidget(label);
     layout->addWidget(closeButton);
     window->setLayout(layout);
     window->show();
