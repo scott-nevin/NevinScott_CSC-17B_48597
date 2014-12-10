@@ -1,5 +1,11 @@
 SOURCES += \
-    main.cpp
+    main.cpp \
+    MainWindow.cpp \
+    QuizDialog.cpp
 QT += widgets
 
-HEADERS +=
+HEADERS += \
+    MainWindow.h \
+    QuizDialog.h
+
+FORMS +=
