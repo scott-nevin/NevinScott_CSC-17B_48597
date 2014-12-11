@@ -48,10 +48,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(multiplication, SIGNAL(clicked()), mulDialog,SLOT(show()));
     connect(division, SIGNAL(clicked()), divDialog,SLOT(show()));
 
-    //print number as label
-    //QString tmp = QString::number(num);
-    //QLabel *label = new QLabel(num);
-
     //layout
     QVBoxLayout *layout = new QVBoxLayout;
     layout->addWidget(title);

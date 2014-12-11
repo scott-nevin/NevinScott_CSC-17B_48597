@@ -15,7 +15,7 @@ class DIV : public QDialog
     Q_OBJECT
 
 public:
-    int numAns;
+    float numAns;
     DIV(QWidget *parent=0);
 
 public slots:

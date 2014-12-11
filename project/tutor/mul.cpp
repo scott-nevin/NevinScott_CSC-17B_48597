@@ -25,10 +25,6 @@ MUL::MUL(QWidget *parent)
     numAns = gen_1 * gen_2;
     //emit checkAnswer(numAns);
 
-    //send to handler
-   // handler(gen_1, gen_2, dummy);
-    //dummy=false;
-
     //add Labels
     setWindowTitle("Questions");
     QString tmp = QString::number(gen_1);

@@ -22,18 +22,10 @@ QuizDialog::QuizDialog(QWidget *parent)
     //seed random number generator
     srand(static_cast<unsigned int>(time(0)));
 
-    //declare variables.
-   // bool dummy = true;
-
     //generate numbers
     int gen_1=gen();
     int gen_2=gen();
     numAns = gen_1 + gen_2;
-    //emit checkAnswer(numAns);
-
-    //send to handler
-   // handler(gen_1, gen_2, dummy);
-    //dummy=false;
 
     //add Labels
     setWindowTitle("Questions");
@@ -60,10 +52,6 @@ QuizDialog::QuizDialog(QWidget *parent)
     connect(next, SIGNAL(clicked()), this, SLOT(nextQ()));
     connect(next, SIGNAL(clicked()), this, SLOT(close()));
 
-
-    //print number as label
-    //QString tmp = QString::number(num);
-    //QLabel *label = new QLabel(tmp);
 
     //layout
     QHBoxLayout *layout = new QHBoxLayout;

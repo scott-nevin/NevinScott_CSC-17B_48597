@@ -7,7 +7,6 @@
 class QLabel;
 class QPushButton;
 class QSpinBox;
-//class QuizDialog;
 
 class MainWindow : public QDialog
 {
@@ -21,10 +20,8 @@ public:
 public slots:
 
 private slots:
-    //void QuizDialog();
 
 private:
-    //QuizDialog *quizDialog;
     QLabel *title;
     QLabel *prompt;
     QPushButton *addition;

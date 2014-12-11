@@ -19,19 +19,15 @@ public:
     QuizDialog(QWidget *parent=0);
 
 public slots:
-    //void checkClicked();
     void checkAnswer();
     void nextQ();
 
 signals:
-    //void sig_1(int);
 
 private slots:
-    //int setDig();
-   // void checkAnswer(int, int);
+
 
 private:
-    //int numType;
     QLabel *num_1;
     QLabel *operation;
     QLabel *num_2;

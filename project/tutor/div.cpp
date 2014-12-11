@@ -14,13 +14,14 @@
 
 //function prototypes
 int genD();
+int gen_D();
 
 DIV::DIV(QWidget *parent)
     : QDialog(parent){
 
     //generate numbers
     int gen_1=genD();
-    int gen_2=genD();
+    int gen_2=gen_D();
     numAns = gen_1 / gen_2;
 
     //add Labels
@@ -97,7 +98,12 @@ void DIV::checkAnswer(){
 
 int genD(){
 
-    return rand()%90+10;
+    return 50 + rand()%50;
+}
+
+int gen_D(){
+
+    return 1 + rand()%9;
 }
 
 void DIV::nextQ(){
