@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mul.h'
 **
-** Created: Wed Dec 10 17:30:08 2014
+** Created: Wed Dec 10 18:06:05 2014
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
