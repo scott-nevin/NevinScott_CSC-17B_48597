@@ -1,5 +1,5 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'QuizDialog.h'
+** Meta object code from reading C++ file 'mul.h'
 **
 ** Created: Wed Dec 10 16:34:48 2014
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
@@ -7,9 +7,9 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../tutor/QuizDialog.h"
+#include "../../tutor/mul.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'QuizDialog.h' doesn't include <QObject>."
+#error "The header file 'mul.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 63
 #error "This file was generated using the moc from 4.8.1. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -17,7 +17,7 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-static const uint qt_meta_data_QuizDialog[] = {
+static const uint qt_meta_data_MUL[] = {
 
  // content:
        6,       // revision
@@ -31,21 +31,21 @@ static const uint qt_meta_data_QuizDialog[] = {
        0,       // signalCount
 
  // slots: signature, parameters, type, tag, flags
-      12,   11,   11,   11, 0x0a,
-      26,   11,   11,   11, 0x0a,
+       5,    4,    4,    4, 0x0a,
+      19,    4,    4,    4, 0x0a,
 
        0        // eod
 };
 
-static const char qt_meta_stringdata_QuizDialog[] = {
-    "QuizDialog\0\0checkAnswer()\0nextQ()\0"
+static const char qt_meta_stringdata_MUL[] = {
+    "MUL\0\0checkAnswer()\0nextQ()\0"
 };
 
-void QuizDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void MUL::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         Q_ASSERT(staticMetaObject.cast(_o));
-        QuizDialog *_t = static_cast<QuizDialog *>(_o);
+        MUL *_t = static_cast<MUL *>(_o);
         switch (_id) {
         case 0: _t->checkAnswer(); break;
         case 1: _t->nextQ(); break;
@@ -55,33 +55,33 @@ void QuizDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     Q_UNUSED(_a);
 }
 
-const QMetaObjectExtraData QuizDialog::staticMetaObjectExtraData = {
+const QMetaObjectExtraData MUL::staticMetaObjectExtraData = {
     0,  qt_static_metacall 
 };
 
-const QMetaObject QuizDialog::staticMetaObject = {
-    { &QDialog::staticMetaObject, qt_meta_stringdata_QuizDialog,
-      qt_meta_data_QuizDialog, &staticMetaObjectExtraData }
+const QMetaObject MUL::staticMetaObject = {
+    { &QDialog::staticMetaObject, qt_meta_stringdata_MUL,
+      qt_meta_data_MUL, &staticMetaObjectExtraData }
 };
 
 #ifdef Q_NO_DATA_RELOCATION
-const QMetaObject &QuizDialog::getStaticMetaObject() { return staticMetaObject; }
+const QMetaObject &MUL::getStaticMetaObject() { return staticMetaObject; }
 #endif //Q_NO_DATA_RELOCATION
 
-const QMetaObject *QuizDialog::metaObject() const
+const QMetaObject *MUL::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
 }
 
-void *QuizDialog::qt_metacast(const char *_clname)
+void *MUL::qt_metacast(const char *_clname)
 {
     if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_QuizDialog))
-        return static_cast<void*>(const_cast< QuizDialog*>(this));
+    if (!strcmp(_clname, qt_meta_stringdata_MUL))
+        return static_cast<void*>(const_cast< MUL*>(this));
     return QDialog::qt_metacast(_clname);
 }
 
-int QuizDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int MUL::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QDialog::qt_metacall(_c, _id, _a);
     if (_id < 0)

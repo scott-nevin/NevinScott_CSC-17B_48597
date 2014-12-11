@@ -1,5 +1,5 @@
-#ifndef QUIZDIALOG_H
-#define QUIZDIALOG_H
+#ifndef MUL_H
+#define MUL_H
 
 #include <QDialog>
 #include <QString>
@@ -9,29 +9,26 @@ class QLabel;
 class QPushButton;
 class QLineEdit;
 
-class QuizDialog : public QDialog
+class MUL : public QDialog
 {
 
     Q_OBJECT
 
 public:
     int numAns;
-    QuizDialog(QWidget *parent=0);
+    MUL(QWidget *parent=0);
 
 public slots:
-    //void checkClicked();
     void checkAnswer();
     void nextQ();
 
-signals:
-    //void sig_1(int);
+
 
 private slots:
-    //int setDig();
-   // void checkAnswer(int, int);
+
 
 private:
-    //int numType;
+
     QLabel *num_1;
     QLabel *operation;
     QLabel *num_2;
@@ -43,5 +40,4 @@ private:
     QLineEdit *response;
 
 };
-
-#endif // QUIZDIALOG_H
+#endif // MUL_H

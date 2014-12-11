@@ -15,9 +15,10 @@ class MainWindow : public QDialog
     Q_OBJECT
 
 public:
+    char type;
     MainWindow(QWidget *parent=0);
 
-signals:
+public slots:
 
 private slots:
     //void QuizDialog();
@@ -26,10 +27,6 @@ private:
     //QuizDialog *quizDialog;
     QLabel *title;
     QLabel *prompt;
-    QLabel *numDig;
-    QLabel *digits;
-    QLabel *label;
-    QSpinBox *spinbox;
     QPushButton *addition;
     QPushButton *subtraction;
     QPushButton *multiplication;

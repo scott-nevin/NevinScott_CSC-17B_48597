@@ -1,4 +1,3 @@
-
 /* Scott Nevin
    Quiz Dialog implementation
    12/10/14
@@ -10,36 +9,25 @@
 #include <QMessageBox>
 #include <QSignalMapper>
 
-#include "QuizDialog.h"
+#include "div.h"
 #include "MainWindow.h"
 
 //function prototypes
-int gen();
+int genD();
 
-QuizDialog::QuizDialog(QWidget *parent)
+DIV::DIV(QWidget *parent)
     : QDialog(parent){
 
-    //seed random number generator
-    srand(static_cast<unsigned int>(time(0)));
-
-    //declare variables.
-   // bool dummy = true;
-
     //generate numbers
-    int gen_1=gen();
-    int gen_2=gen();
-    numAns = gen_1 + gen_2;
-    //emit checkAnswer(numAns);
-
-    //send to handler
-   // handler(gen_1, gen_2, dummy);
-    //dummy=false;
+    int gen_1=genD();
+    int gen_2=genD();
+    numAns = gen_1 / gen_2;
 
     //add Labels
     setWindowTitle("Questions");
     QString tmp = QString::number(gen_1);
     num_1 = new QLabel(tmp);
-    operation = new QLabel("+");
+    operation = new QLabel("/");
     QString tmp_1 = QString::number(gen_2);
     num_2 = new QLabel(tmp_1);
     equation = new QLabel("= ?");
@@ -60,10 +48,6 @@ QuizDialog::QuizDialog(QWidget *parent)
     connect(next, SIGNAL(clicked()), this, SLOT(nextQ()));
     connect(next, SIGNAL(clicked()), this, SLOT(close()));
 
-
-    //print number as label
-    //QString tmp = QString::number(num);
-    //QLabel *label = new QLabel(tmp);
 
     //layout
     QHBoxLayout *layout = new QHBoxLayout;
@@ -94,7 +78,7 @@ QuizDialog::QuizDialog(QWidget *parent)
 
 }
 
-void QuizDialog::checkAnswer(){
+void DIV::checkAnswer(){
 
 
     QString text = response->text();
@@ -111,17 +95,18 @@ void QuizDialog::checkAnswer(){
 }
 
 
-int gen(){
+int genD(){
 
     return rand()%90+10;
 }
 
-void QuizDialog::nextQ(){
+void DIV::nextQ(){
 
-    QuizDialog *subDialog = new QuizDialog;
+    DIV *subDialog = new DIV;
     subDialog->show();
     connect(next, SIGNAL(clicked()), this, SLOT(close()));
 
 }
+
 
 

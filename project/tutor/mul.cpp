@@ -10,25 +10,19 @@
 #include <QMessageBox>
 #include <QSignalMapper>
 
-#include "QuizDialog.h"
+#include "mul.h"
 #include "MainWindow.h"
 
 //function prototypes
-int gen();
+int genM();
 
-QuizDialog::QuizDialog(QWidget *parent)
+MUL::MUL(QWidget *parent)
     : QDialog(parent){
 
-    //seed random number generator
-    srand(static_cast<unsigned int>(time(0)));
-
-    //declare variables.
-   // bool dummy = true;
-
     //generate numbers
-    int gen_1=gen();
-    int gen_2=gen();
-    numAns = gen_1 + gen_2;
+    int gen_1=genM();
+    int gen_2=genM();
+    numAns = gen_1 * gen_2;
     //emit checkAnswer(numAns);
 
     //send to handler
@@ -39,7 +33,7 @@ QuizDialog::QuizDialog(QWidget *parent)
     setWindowTitle("Questions");
     QString tmp = QString::number(gen_1);
     num_1 = new QLabel(tmp);
-    operation = new QLabel("+");
+    operation = new QLabel("x");
     QString tmp_1 = QString::number(gen_2);
     num_2 = new QLabel(tmp_1);
     equation = new QLabel("= ?");
@@ -60,10 +54,6 @@ QuizDialog::QuizDialog(QWidget *parent)
     connect(next, SIGNAL(clicked()), this, SLOT(nextQ()));
     connect(next, SIGNAL(clicked()), this, SLOT(close()));
 
-
-    //print number as label
-    //QString tmp = QString::number(num);
-    //QLabel *label = new QLabel(tmp);
 
     //layout
     QHBoxLayout *layout = new QHBoxLayout;
@@ -94,7 +84,7 @@ QuizDialog::QuizDialog(QWidget *parent)
 
 }
 
-void QuizDialog::checkAnswer(){
+void MUL::checkAnswer(){
 
 
     QString text = response->text();
@@ -111,14 +101,14 @@ void QuizDialog::checkAnswer(){
 }
 
 
-int gen(){
+int genM(){
 
     return rand()%90+10;
 }
 
-void QuizDialog::nextQ(){
+void MUL::nextQ(){
 
-    QuizDialog *subDialog = new QuizDialog;
+    MUL *subDialog = new MUL;
     subDialog->show();
     connect(next, SIGNAL(clicked()), this, SLOT(close()));
 
